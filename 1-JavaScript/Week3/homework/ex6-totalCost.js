@@ -22,10 +22,20 @@ instead!
 -----------------------------------------------------------------------------*/
 const cartForParty = {
   // TODO complete this object
+  chips: 2,
+  cola: 1.7,
+  marshmello: 0.7,
+  tea: 4,
+  pistachio: 3,
 };
 
-function calculateTotalPrice(/* TODO parameter(s) go here */) {
+function calculateTotalPrice(cartForParty) {
   // TODO replace this comment with your code
+  let sum = 0;
+  for (const key of Object.keys(cartForParty)) {
+    sum = sum + cartForParty[key];
+  }
+  return `Total: € ${sum}.`;
 }
 
 function test1() {
