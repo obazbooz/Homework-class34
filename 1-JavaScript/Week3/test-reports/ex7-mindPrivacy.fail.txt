@@ -1,0 +1,15 @@
+
+*** ESLint Report ***
+
+ex7-mindPrivacy.js
+  35:7   warning  'name' is never reassigned. Use 'const' instead                no-autofix/prefer-const
+  35:13  warning  'occupation' is never reassigned. Use 'const' instead          no-autofix/prefer-const
+  35:25  warning  'email' is never reassigned. Use 'const' instead               no-autofix/prefer-const
+  36:13  warning  'name2' is never reassigned. Use 'const' instead               no-autofix/prefer-const
+  36:32  warning  'occupation2' is never reassigned. Use 'const' instead         no-autofix/prefer-const
+  36:52  warning  'email2' is never reassigned. Use 'const' instead              no-autofix/prefer-const
+  38:7   warning  'newEmployeeRecords' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+  72:3   warning  Remove commented-out code                                      hyf/no-commented-out-code
+
+✖ 8 problems (0 errors, 8 warnings)
+

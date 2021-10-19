@@ -38,7 +38,7 @@ function calculateTotalPrice(receipt) {
 
 function test1() {
   console.log('\nTest 1: calculateTotalPrice should take one parameter');
-  console.assert(calculateTotalPrice(cartForParty));
+  console.assert(calculateTotalPrice.length === 1);
 }
 
 function test2() {
