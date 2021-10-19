@@ -3,3 +3,8 @@
 2021-10-19 03:54:13 info: --------------------------------------------
 2021-10-19 03:54:13 warn: A unit test file was not provided.
 2021-10-19 03:54:18 info: All steps were completed successfully
+2021-10-19 05:04:13 info: ------------------------------------------------
+2021-10-19 05:04:13 info: >>> Running Unit Test `ex5-shoppingCartPure` <<<
+2021-10-19 05:04:13 info: ------------------------------------------------
+2021-10-19 05:04:13 warn: A unit test file was not provided.
+2021-10-19 05:04:18 info: All steps were completed successfully
