@@ -8,3 +8,22 @@
 2021-10-19 05:04:13 info: ------------------------------------------------
 2021-10-19 05:04:13 warn: A unit test file was not provided.
 2021-10-19 05:04:18 info: All steps were completed successfully
+2021-10-19 08:36:36 info: -------------------------------------------
+2021-10-19 08:36:36 info: >>> Running Unit Test `ex7-mindPrivacy` <<<
+2021-10-19 08:36:36 info: -------------------------------------------
+2021-10-19 08:36:36 warn: A unit test file was not provided.
+2021-10-19 08:36:39 error: *** ESLint Report ***
+
+ex7-mindPrivacy.js
+  35:7   warning  'name' is never reassigned. Use 'const' instead                no-autofix/prefer-const
+  35:13  warning  'occupation' is never reassigned. Use 'const' instead          no-autofix/prefer-const
+  35:25  warning  'email' is never reassigned. Use 'const' instead               no-autofix/prefer-const
+  36:13  warning  'name2' is never reassigned. Use 'const' instead               no-autofix/prefer-const
+  36:32  warning  'occupation2' is never reassigned. Use 'const' instead         no-autofix/prefer-const
+  36:52  warning  'email2' is never reassigned. Use 'const' instead              no-autofix/prefer-const
+  38:7   warning  'newEmployeeRecords' is never reassigned. Use 'const' instead  no-autofix/prefer-const
+  72:3   warning  Remove commented-out code                                      hyf/no-commented-out-code
+
+✖ 8 problems (0 errors, 8 warnings)
+
+
