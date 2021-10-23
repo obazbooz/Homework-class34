@@ -471,3 +471,24 @@ Snapshots:   0 total
 Time:        2.976 s
 Ran all test suites matching /ex3-lemonAllergy.test.js/i.
 
+2021-10-23 02:59:23 info: ------------------------------------------
+2021-10-23 02:59:23 info: >>> Running Unit Test `ex4-observable` <<<
+2021-10-23 02:59:23 info: ------------------------------------------
+2021-10-23 02:59:31 info: All unit tests passed.
+2021-10-23 02:59:37 info: All steps were completed successfully
+2021-10-23 05:03:05 info: --------------------------------------
+2021-10-23 05:03:05 info: >>> Running Unit Test `ex5-wallet` <<<
+2021-10-23 05:03:05 info: --------------------------------------
+2021-10-23 05:03:12 error: *** Unit Test Error Report ***
+
+- wallet q1: At line 26, which variables are in the scope marked Closure?
+- wallet q2: What is in the Call Stack, from top to bottom?
+- wallet q3: What tooltip appears when hovering over the third debug button?
+- wallet q4: What is displayed in the console?
+- wallet q5: The owner of the wallet with insufficient funds is:
+
+2021-10-23 05:05:46 info: --------------------------------------
+2021-10-23 05:05:46 info: >>> Running Unit Test `ex5-wallet` <<<
+2021-10-23 05:05:46 info: --------------------------------------
+2021-10-23 05:05:51 info: All unit tests passed.
+2021-10-23 05:05:56 info: All steps were completed successfully
