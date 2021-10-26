@@ -492,3 +492,164 @@ Ran all test suites matching /ex3-lemonAllergy.test.js/i.
 2021-10-23 05:05:46 info: --------------------------------------
 2021-10-23 05:05:51 info: All unit tests passed.
 2021-10-23 05:05:56 info: All steps were completed successfully
+2021-10-24 11:46:05 info: ------------------------------------------
+2021-10-24 11:46:05 info: >>> Running Unit Test `ex4-observable` <<<
+2021-10-24 11:46:05 info: ------------------------------------------
+2021-10-24 11:46:12 info: All unit tests passed.
+2021-10-24 11:46:17 info: All steps were completed successfully
+2021-10-26 02:23:39 info: ------------------------------------------------------
+2021-10-26 02:23:39 info: >>> Running Unit Test `ex1-doubleEvenNumbers.test` <<<
+2021-10-26 02:23:39 info: ------------------------------------------------------
+2021-10-26 02:23:46 info: All unit tests passed.
+2021-10-26 02:23:51 info: All steps were completed successfully
+2021-10-26 02:24:17 info: -------------------------------------------------
+2021-10-26 02:24:17 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2021-10-26 02:24:17 info: -------------------------------------------------
+2021-10-26 02:24:22 info: All unit tests passed.
+2021-10-26 02:24:27 info: All steps were completed successfully
+2021-10-26 02:24:42 info: -------------------------------------------------
+2021-10-26 02:24:42 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2021-10-26 02:24:42 info: -------------------------------------------------
+2021-10-26 02:24:48 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (7 ms)
+    × should not modify the original `fruitBasket` array (5 ms)
+    × should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 1
+
+      34 | describe('sanitizeFruitBasket', () => {
+      35 |   test('should take two parameters', () => {
+    > 36 |     expect(sanitizeFruitBasket.length).toBe(2);
+         |                                        ^
+      37 |   });
+      38 |
+      39 |   test('should not modify the original `fruitBasket` array', () => {
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:36:40)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 3
+
+      Array [
+        "apple",
+    +   "lemon",
+        "grapefruit",
+    +   "lemon",
+        "banana",
+        "watermelon",
+    +   "lemon",
+      ]
+
+      40 |     // Save the original contents of the fruit basket
+      41 |     const originalFruitBasketContents = [...fruitBasket];
+    > 42 |     expect(originalFruitBasketContents).toEqual(
+         |                                         ^
+      43 |       sanitizeFruitBasket(fruitBasket)
+      44 |     );
+      45 |   });
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:42:41)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      47 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      48 |     const actualArray = sanitizeFruitBasket(fruitBasket);
+    > 49 |     expect(false).toBe(actualArray.every((item) => item !== 'lemon'));
+         |                   ^
+      50 |   });
+      51 | });
+      52 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:49:19)
+
+Test Suites: 1 failed, 1 total
+Tests:       3 failed, 3 total
+Snapshots:   0 total
+Time:        2.612 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+
+2021-10-26 02:28:52 info: -------------------------------------------------
+2021-10-26 02:28:52 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2021-10-26 02:28:52 info: -------------------------------------------------
+2021-10-26 02:28:58 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    × should take two parameters (7 ms)
+    × should not modify the original `fruitBasket` array (9 ms)
+    √ should return a new array that does not include the unwanted `lemon` (1 ms)
+
+  ● sanitizeFruitBasket › should take two parameters
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 2
+    Received: 1
+
+      34 | describe('sanitizeFruitBasket', () => {
+      35 |   test('should take two parameters', () => {
+    > 36 |     expect(sanitizeFruitBasket.length).toBe(2);
+         |                                        ^
+      37 |   });
+      38 |
+      39 |   test('should not modify the original `fruitBasket` array', () => {
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:36:40)
+
+  ● sanitizeFruitBasket › should not modify the original `fruitBasket` array
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 0
+    + Received  + 3
+
+      Array [
+        "apple",
+    +   "lemon",
+        "grapefruit",
+    +   "lemon",
+        "banana",
+        "watermelon",
+    +   "lemon",
+      ]
+
+      40 |     // Save the original contents of the fruit basket
+      41 |     const originalFruitBasketContents = [...fruitBasket];
+    > 42 |     expect(originalFruitBasketContents).toEqual(
+         |                                         ^
+      43 |       sanitizeFruitBasket(fruitBasket)
+      44 |     );
+      45 |   });
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:42:41)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 1 passed, 3 total
+Snapshots:   0 total
+Time:        2.838 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+
+2021-10-26 02:30:59 info: ------------------------------------------
+2021-10-26 02:30:59 info: >>> Running Unit Test `ex4-observable` <<<
+2021-10-26 02:30:59 info: ------------------------------------------
+2021-10-26 02:31:04 info: All unit tests passed.
+2021-10-26 02:31:08 info: All steps were completed successfully

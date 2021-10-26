@@ -3,9 +3,9 @@
 Command failed: npx jest ex3-lemonAllergy.test.js --colors
  FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
   sanitizeFruitBasket
-    × should take two parameters (8 ms)
-    × should not modify the original `fruitBasket` array (6 ms)
-    × should return a new array that does not include the unwanted `lemon` (1 ms)
+    × should take two parameters (7 ms)
+    × should not modify the original `fruitBasket` array (9 ms)
+    √ should return a new array that does not include the unwanted `lemon` (1 ms)
 
   ● sanitizeFruitBasket › should take two parameters
 
@@ -51,25 +51,8 @@ Command failed: npx jest ex3-lemonAllergy.test.js --colors
 
       at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:42:41)
 
-  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
-
-    expect(received).toBe(expected) // Object.is equality
-
-    Expected: true
-    Received: false
-
-      47 |   test('should return a new array that does not include the unwanted `lemon`', () => {
-      48 |     const actualArray = sanitizeFruitBasket(fruitBasket);
-    > 49 |     expect(false).toBe(actualArray.every((item) => item !== 'lemon'));
-         |                   ^
-      50 |   });
-      51 | });
-      52 |
-
-      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:49:19)
-
 Test Suites: 1 failed, 1 total
-Tests:       3 failed, 3 total
+Tests:       2 failed, 1 passed, 3 total
 Snapshots:   0 total
-Time:        2.976 s
+Time:        2.838 s
 Ran all test suites matching /ex3-lemonAllergy.test.js/i.
