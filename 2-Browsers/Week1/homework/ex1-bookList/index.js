@@ -39,7 +39,34 @@ const myBooks = [
 ];
 
 function createBookList(books) {
-  // TODO your code goes in here, return the ul element
+  const ulEl = document.createElement('ul');
+  books.forEach((book, index) => {
+    const liEl = document.createElement('li');
+    const pEl = document.createElement('p');
+    const imgEl = document.createElement('img');
+    pEl.textContent = `${book.title} - ${book.author}`;
+    if (index === 0) {
+      imgEl.src = 'assets/the_design_of_everyday_things.jpg';
+      imgEl.alt = 'Image Not Found!';
+    } else if (index === 1) {
+      imgEl.src = 'assets/the_most_human_human.jpg';
+      imgEl.alt = 'Image Not Found!';
+    } else {
+      imgEl.src = 'assets/the_pragmatic_programmer.jpg';
+      imgEl.alt = 'Image Not Found!';
+    }
+    if (book.alreadyRead === true) liEl.style.backgroundColor = '#00ff00';
+    else liEl.style.backgroundColor = '#ff0000';
+
+    liEl.style.margin = 'auto';
+    liEl.style.padding = '20px';
+    liEl.append(pEl, imgEl);
+    ulEl.append(liEl);
+  });
+
+  ulEl.style.display = 'flex';
+  ulEl.style.listStyle = 'none';
+  return ulEl;
 }
 
 const ulElement = createBookList(myBooks);
