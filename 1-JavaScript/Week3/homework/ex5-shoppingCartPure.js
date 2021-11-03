@@ -17,10 +17,11 @@ it pure. Do the following:
 ------------------------------------------------------------------------------*/
 // ! Function under test
 function addToShoppingCart(shoppingCart, groceryItem) {
-  if (shoppingCart.length > 2) {
-    shoppingCart.pop();
-    return [...shoppingCart, groceryItem];
-  } else return [...shoppingCart, groceryItem];
+  const newShoppingCart = shoppingCart;
+  if (newShoppingCart.length > 2) {
+    newShoppingCart.pop();
+    return [...newShoppingCart, groceryItem];
+  } else return [...newShoppingCart, groceryItem];
 }
 
 // ! Test functions (plain vanilla JavaScript)

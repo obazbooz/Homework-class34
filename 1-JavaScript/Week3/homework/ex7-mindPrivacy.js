@@ -31,11 +31,11 @@ const employeeRecords = [
 
 // ! Function under test
 function filterPrivateData(empRecord) {
-  let [
+  const [
     { name, occupation, email },
     { name: name2, occupation: occupation2, email: email2 },
   ] = empRecord;
-  let newEmployeeRecords = [
+  const newEmployeeRecords = [
     { name, occupation, email },
     { name: name2, occupation: occupation2, email: email2 },
   ];
@@ -69,7 +69,6 @@ function test2() {
 function test() {
   test1();
   test2();
-  //console.log(filterPrivateData(employeeRecords));
 }
 
 test();
