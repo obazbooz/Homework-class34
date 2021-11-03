@@ -653,3 +653,223 @@ Ran all test suites matching /ex3-lemonAllergy.test.js/i.
 2021-10-26 02:30:59 info: ------------------------------------------
 2021-10-26 02:31:04 info: All unit tests passed.
 2021-10-26 02:31:08 info: All steps were completed successfully
+2021-11-03 04:14:30 info: -------------------------------------------------
+2021-11-03 04:14:30 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2021-11-03 04:14:30 info: -------------------------------------------------
+2021-11-03 04:14:38 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex2-mondaysWorth.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js
+  computeEarnings
+    √ should take two parameters (3 ms)
+    × should compute the earnings as a formatted Euro amount (6 ms)
+
+  ● computeEarnings › should compute the earnings as a formatted Euro amount
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "€187.50"
+    Received: "€187.5"
+
+      53 |     const result = computeEarnings(mondayTasks, hourlyRate);
+      54 |     const expected = '€187.50';
+    > 55 |     expect(result).toBe(expected);
+         |                    ^
+      56 |   });
+      57 | });
+      58 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex2-mondaysWorth.test.js:55:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 passed, 2 total
+Snapshots:   0 total
+Time:        3.885 s
+Ran all test suites matching /ex2-mondaysWorth.test.js/i.
+
+2021-11-03 04:19:16 info: -------------------------------------------------
+2021-11-03 04:19:16 info: >>> Running Unit Test `ex2-mondaysWorth.test` <<<
+2021-11-03 04:19:16 info: -------------------------------------------------
+2021-11-03 04:19:21 info: All unit tests passed.
+2021-11-03 04:19:26 info: All steps were completed successfully
+2021-11-03 04:23:29 info: -------------------------------------------------
+2021-11-03 04:23:29 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2021-11-03 04:23:29 info: -------------------------------------------------
+2021-11-03 04:23:35 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    √ should take two parameters (2 ms)
+    √ should not modify the original `fruitBasket` array (1 ms)
+    × should return a new array that does not include the unwanted `lemon` (4 ms)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      47 |   test('should return a new array that does not include the unwanted `lemon`', () => {
+      48 |     const actualArray = sanitizeFruitBasket(fruitBasket);
+    > 49 |     expect(true).toBe(actualArray.every((item) => item !== 'lemon'));
+         |                  ^
+      50 |   });
+      51 | });
+      52 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:49:18)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        2.727 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+
+2021-11-03 04:30:44 info: -------------------------------------------------
+2021-11-03 04:30:44 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2021-11-03 04:30:44 info: -------------------------------------------------
+2021-11-03 04:30:49 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    √ should take two parameters (3 ms)
+    √ should not modify the original `fruitBasket` array (2 ms)
+    × should return a new array that does not include the unwanted `lemon` (7 ms)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 0
+
+      Array [
+        "apple",
+    -   "lemon",
+        "grapefruit",
+    -   "lemon",
+        "banana",
+        "watermelon",
+    -   "lemon",
+      ]
+
+      48 |     const actualArray = sanitizeFruitBasket(fruitBasket);
+      49 |     const expectedArray = ['apple', 'grapefruit', 'banana', 'watermelon'];
+    > 50 |     expect(expectedArray).toEqual(actualArray);
+         |                           ^
+      51 |   });
+      52 | });
+      53 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:50:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        2.689 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+
+2021-11-03 04:33:43 info: -------------------------------------------------
+2021-11-03 04:33:43 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2021-11-03 04:33:43 info: -------------------------------------------------
+2021-11-03 04:33:49 error: *** Unit Test Error Report ***
+
+  console.log
+    [
+      'apple',
+      'lemon',
+      'grapefruit',
+      'lemon',
+      'banana',
+      'watermelon',
+      'lemon'
+    ]
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:49:13)
+
+
+2021-11-03 04:34:37 info: -------------------------------------------------
+2021-11-03 04:34:37 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2021-11-03 04:34:37 info: -------------------------------------------------
+2021-11-03 04:34:43 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex3-lemonAllergy.test.js --colors
+ FAIL  1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js
+  sanitizeFruitBasket
+    √ should take two parameters (2 ms)
+    √ should not modify the original `fruitBasket` array (1 ms)
+    × should return a new array that does not include the unwanted `lemon` (11 ms)
+
+  ● sanitizeFruitBasket › should return a new array that does not include the unwanted `lemon`
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 3
+    + Received  + 0
+
+      Array [
+        "apple",
+    -   "lemon",
+        "grapefruit",
+    -   "lemon",
+        "banana",
+        "watermelon",
+    -   "lemon",
+      ]
+
+      49 |     //console.log(actualArray);
+      50 |     const expectedArray = ['apple', 'grapefruit', 'banana', 'watermelon'];
+    > 51 |     expect(expectedArray).toEqual(actualArray);
+         |                           ^
+      52 |   });
+      53 | });
+      54 |
+
+      at Object.<anonymous> (1-JavaScript/Week4/homework/ex3-lemonAllergy.test.js:51:27)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 2 passed, 3 total
+Snapshots:   0 total
+Time:        3.28 s
+Ran all test suites matching /ex3-lemonAllergy.test.js/i.
+
+2021-11-03 04:34:45 error: *** ESLint Report ***
+
+ex3-lemonAllergy.test.js
+  49:5  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2021-11-03 04:36:38 info: -------------------------------------------------
+2021-11-03 04:36:38 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2021-11-03 04:36:38 info: -------------------------------------------------
+2021-11-03 04:36:43 info: All unit tests passed.
+2021-11-03 04:36:45 error: *** ESLint Report ***
+
+ex3-lemonAllergy.test.js
+  49:5  warning  Remove commented-out code  hyf/no-commented-out-code
+
+✖ 1 problem (0 errors, 1 warning)
+
+
+2021-11-03 04:37:02 info: -------------------------------------------------
+2021-11-03 04:37:02 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2021-11-03 04:37:02 info: -------------------------------------------------
+2021-11-03 04:37:07 info: All unit tests passed.
+2021-11-03 04:37:12 info: All steps were completed successfully
+2021-11-03 04:40:39 info: -------------------------------------------------
+2021-11-03 04:40:39 info: >>> Running Unit Test `ex3-lemonAllergy.test` <<<
+2021-11-03 04:40:39 info: -------------------------------------------------
+2021-11-03 04:40:44 info: All unit tests passed.
+2021-11-03 04:40:46 error: *** ESLint Report ***
+
+ex3-lemonAllergy.test.js
+  42:11  error  'actualArray' is assigned a value but never used  no-unused-vars
+
+✖ 1 problem (1 error, 0 warnings)
+
+

@@ -32,11 +32,13 @@ const mondayTasks = [
 const hourlyRate = 25;
 
 function computeEarnings(tasks, rate) {
-  const duration = tasks.reduce(
-    (workingDuration, task) => (workingDuration += task.duration),
-    0
-  );
-  return `€${(duration * rate) / 60}0`;
+  let yourSalary = 0;
+  const duration = tasks.reduce((workingDuration, task) => {
+    workingDuration += task.duration;
+    return workingDuration;
+  }, 0);
+  yourSalary = ((duration * rate) / 60).toFixed(2);
+  return `€${yourSalary}`;
 }
 
 // ! Unit tests (using Jest)
