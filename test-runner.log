@@ -1,0 +1,123 @@
+2021-11-21 07:22:20 info: ---------------------------------------
+2021-11-21 07:22:20 info: >>> Running Unit Test `ex1-johnWho` <<<
+2021-11-21 07:22:20 info: ---------------------------------------
+2021-11-21 07:22:29 error: *** Unit Test Error Report ***
+
+Command failed: npx jest ex1-johnWho.test.js --colors
+ FAIL  3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js
+  getAnonName
+    √ should exist and be executable (4 ms)
+    × should have all TODO comments removed (15 ms)
+    √ should call `new Promise()` (1 ms)
+    × should take a single argument (2 ms)
+    √ `resolve()` should be called with a one argument (1 ms)
+    √ `reject()` should be called with a one argument
+    √ should resolve when called with a string argument (1002 ms)
+    √ should reject with an Error object when called without an argument (1001 ms)
+
+  ● getAnonName › should have all TODO comments removed
+
+    expect(received).toBeFalsy()
+
+    Received: true
+
+      113 |
+      114 | function checkTodos(source) {
+    > 115 |   expect(source.includes('TODO')).toBeFalsy();
+          |                                   ^
+      116 | }
+      117 |
+      118 | module.exports = {
+
+      at checkTodos (test-runner/unit-test-helpers.js:115:35)
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:48:55)
+
+  ● getAnonName › should take a single argument
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 2
+
+      53 |
+      54 |   test('should take a single argument', () => {
+    > 55 |     expect(state.paramCount).toBe(1);
+         |                              ^
+      56 |   });
+      57 |
+      58 |   test('`resolve()` should be called with a one argument', () => {
+
+      at Object.<anonymous> (3-UsingAPIs/Week1/unit-tests/ex1-johnWho.test.js:55:30)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 6 passed, 8 total
+Snapshots:   0 total
+Time:        5.672 s
+Ran all test suites matching /ex1-johnWho.test.js/i.
+
+2021-11-21 07:22:32 error: *** Spell Checker Report ***
+
+
+2021-11-21 07:22:36 info: Disclaimer turned off
+2021-11-21 07:24:09 info: ---------------------------------------
+2021-11-21 07:24:09 info: >>> Running Unit Test `ex1-johnWho` <<<
+2021-11-21 07:24:09 info: ---------------------------------------
+2021-11-21 07:24:17 info: All unit tests passed.
+2021-11-21 07:24:20 error: *** Spell Checker Report ***
+
+
+2021-11-21 07:25:39 info: ---------------------------------------
+2021-11-21 07:25:39 info: >>> Running Unit Test `ex1-johnWho` <<<
+2021-11-21 07:25:39 info: ---------------------------------------
+2021-11-21 07:25:47 info: All unit tests passed.
+2021-11-21 07:25:49 error: *** Spell Checker Report ***
+
+
+2021-11-21 07:33:59 info: -------------------------------------------------
+2021-11-21 07:33:59 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2021-11-21 07:33:59 info: -------------------------------------------------
+2021-11-21 07:34:06 error: *** Unit Test Error Report ***
+
+  console.log
+    This is a double digit number!
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:29:30
+
+  console.log
+    Expected a double digit number but got 5
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:34:29
+
+  console.log
+    Expected a double digit number but got 123
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:38:29
+
+
+2021-11-21 07:34:09 error: *** Spell Checker Report ***
+
+
+2021-11-21 07:35:36 info: -------------------------------------------------
+2021-11-21 07:35:36 info: >>> Running Unit Test `ex2-checkDoubleDigits` <<<
+2021-11-21 07:35:36 info: -------------------------------------------------
+2021-11-21 07:35:41 error: *** Unit Test Error Report ***
+
+  console.log
+    This is a double digit number!
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:29:30
+
+  console.log
+    Expected a double digit number but got 5
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:34:29
+
+  console.log
+    Expected a double digit number but got 123
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:38:29
+
+
+2021-11-21 07:35:44 error: *** Spell Checker Report ***
+
+

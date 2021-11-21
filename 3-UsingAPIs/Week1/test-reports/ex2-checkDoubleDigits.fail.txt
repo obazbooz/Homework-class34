@@ -1,0 +1,20 @@
+*** Unit Test Error Report ***
+
+  console.log
+    This is a double digit number!
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:29:30
+
+  console.log
+    Expected a double digit number but got 5
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:34:29
+
+  console.log
+    Expected a double digit number but got 123
+
+      at 3-UsingAPIs/Week1/homework/ex2-checkDoubleDigits.js:38:29
+
+
+*** Spell Checker Report ***
+
