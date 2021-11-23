@@ -27,14 +27,25 @@ exercise file.
 const rollDice = require('../../helpers/pokerDiceRoller');
 
 function rollTheDices() {
-  // TODO Refactor this function
+  // return new Promise((resolve) => {
   const dices = [1, 2, 3, 4, 5];
-  return rollDice(1);
+  const arrayOfPromises = dices.map((dice) => {
+    rollDice(dice);
+  });
+  return Promise.all(arrayOfPromises);
 }
 
 rollTheDices()
-  .then((results) => console.log('Resolved!', results))
-  .catch((error) => console.log('Rejected!', error.message));
+  .then((results) => {
+    console.log('Resolved!', results);
+  })
+  .catch((error) => {
+    console.log('Rejected!', error.message);
+  });
 
 // ! Do not change or remove the code below
 module.exports = rollTheDices;
+
+// In the case of a rejected promise the dices that have not yet finished their
+//roll continue to do because I think when we get rejected Promise we do not stop
+// the rolling and we can do that by using (return) after the reject() statement.

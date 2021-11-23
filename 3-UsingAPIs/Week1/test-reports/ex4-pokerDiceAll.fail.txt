@@ -1,0 +1,10 @@
+*** Unit Test Error Report ***
+
+  console.log
+    Resolved! [ undefined, undefined, undefined, undefined, undefined ]
+
+      at 3-UsingAPIs/Week1/homework/ex4-pokerDiceAll.js:41:13
+
+
+*** Spell Checker Report ***
+
