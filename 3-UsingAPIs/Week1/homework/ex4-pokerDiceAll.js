@@ -30,7 +30,7 @@ function rollTheDices() {
   // return new Promise((resolve) => {
   const dices = [1, 2, 3, 4, 5];
   const arrayOfPromises = dices.map((dice) => {
-    rollDice(dice);
+    return rollDice(dice);
   });
   return Promise.all(arrayOfPromises);
 }
@@ -40,7 +40,10 @@ rollTheDices()
     console.log('Resolved!', results);
   })
   .catch((error) => {
-    console.log('Rejected!', error.message);
+    setTimeout(() => {
+      console.log('Rejected!', error.message);
+      return;
+    }, 1000);
   });
 
 // ! Do not change or remove the code below
@@ -49,3 +52,10 @@ module.exports = rollTheDices;
 // In the case of a rejected promise the dices that have not yet finished their
 //roll continue to do because I think when we get rejected Promise we do not stop
 // the rolling and we can do that by using (return) after the reject() statement.
+//--------------
+// After correcting the code I added a return to the error catch
+//and I have noticed that I still getting result after the we get rejected
+// and I think thats because I have here async code and the execution takes different time
+//some statements execute before others so even I get rejected and I return I still have
+//statements in the event loop.
+// to solve that I have used a setTimeout function.

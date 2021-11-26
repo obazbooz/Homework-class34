@@ -1,6 +1,6 @@
 'use strict';
 
-const { error } = require('winston');
+//const { error } = require('winston');
 
 /*------------------------------------------------------------------------------
 Full description at: https://github.com/HackYourFuture/Homework/tree/main/3-UsingAPIs/Week1#exercise-2-is-it-a-double-digit-number
@@ -17,7 +17,7 @@ Complete the function called `checkDoubleDigits` such that:
 ------------------------------------------------------------------------------*/
 function checkDoubleDigits(number) {
   return new Promise((resolve, reject) => {
-    if (number > 10 && number < 99) {
+    if (number >= 10 && number <= 99) {
       resolve('This is a double digit number!');
       return;
     }
