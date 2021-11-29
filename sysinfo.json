@@ -1,0 +1,57 @@
+{
+  "node": "v14.18.1",
+  "system": {
+    "manufacturer": "LENOVO",
+    "model": "81DE"
+  },
+  "cpu": {
+    "manufacturer": "Intel®",
+    "brand": "Core™ i3-7020U",
+    "speed": 2.3
+  },
+  "memory": "8 GB",
+  "osInfo": {
+    "platform": "win32",
+    "distro": "Microsoft Windows 10 Pro",
+    "release": "10.0.19041"
+  },
+  "vscodeInfo": {
+    "version": "1.62.3",
+    "extensions": [
+      "aaron-bond.better-comments",
+      "ajhyndman.jslint",
+      "bierner.github-markdown-preview",
+      "bierner.markdown-checkbox",
+      "bierner.markdown-emoji",
+      "bierner.markdown-preview-github-styles",
+      "bierner.markdown-yaml-preamble",
+      "CoenraadS.bracket-pair-colorizer-2",
+      "DavidAnson.vscode-markdownlint",
+      "dbaeumer.vscode-eslint",
+      "eamodio.gitlens",
+      "esbenp.prettier-vscode",
+      "evgeniypeshkov.syntax-highlighter",
+      "firsttris.vscode-jest-runner",
+      "hdg.live-html-previewer",
+      "ritwickdey.LiveServer",
+      "streetsidesoftware.code-spell-checker",
+      "techer.open-in-browser"
+    ],
+    "userSettings": {
+      "editor.detectIndentation": false,
+      "editor.formatOnSave": true,
+      "editor.minimap.enabled": false,
+      "editor.renderIndentGuides": true,
+      "editor.tabSize": 2,
+      "editor.codeActionsOnSave": {
+        "source.fixAll": true
+      },
+      "eslint.autoFixOnSave": true,
+      "files.autoSave": "onFocusChange",
+      "prettier.singleQuote": true,
+      "prettier.trailingComma": "all",
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "window.zoomLevel": 1
+    }
+  }
+}
