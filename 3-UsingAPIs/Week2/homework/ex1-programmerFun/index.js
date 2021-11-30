@@ -35,14 +35,14 @@ function renderImage(data) {
 
 function renderError(error) {
   const errorElement = document.createElement('h1');
-  errorElement.textContent = Error;
+  errorElement.textContent = error;
   document.body.appendChild(errorElement);
 }
 
 async function main() {
   try {
     const jsonResponse = await requestData('https://xkcd.now.sh/?comic=latest');
-    const jsonImage = await renderImage(jsonResponse);
+    await renderImage(jsonResponse);
   } catch (error) {
     renderError(error);
   }

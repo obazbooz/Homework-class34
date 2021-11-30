@@ -35,9 +35,6 @@ async function main() {
   } catch (error) {
     console.log('Rejected!', error.message);
   }
-  // rollDiceUntil('ACE', flag)
-  //   .then((results) => console.log('Resolved!', results))
-  //   .catch((error) => console.log('Rejected!', error.message));
 }
 
 main();

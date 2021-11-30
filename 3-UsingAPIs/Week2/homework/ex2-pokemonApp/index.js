@@ -22,7 +22,6 @@ Use async/await and try/catch to handle promises.
 Try and avoid using global variables. As much as possible, try and use function 
 parameters and return values to pass data back and forth.
 ------------------------------------------------------------------------------*/
-//const url = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
 
 async function fetchData(url) {
   try {
@@ -47,14 +46,12 @@ function selectElementcreator(optionData) {
 
 function fetchAndPopulatePokemons(resultsData) {
   const getPokemonButton = document.createElement('button');
+  getPokemonButton.type = 'text';
   getPokemonButton.textContent = 'Get Pokemon';
   document.body.appendChild(getPokemonButton);
   const selectElement = document.createElement('select');
   selectElement.setAttribute('id', 'selectElementID');
   document.body.appendChild(selectElement);
-  const pokemonImage = document.createElement('img');
-  pokemonImage.style.display = 'block';
-  document.body.appendChild(pokemonImage);
   getPokemonButton.addEventListener('click', () => {
     resultsData.forEach((element) => {
       selectElementcreator(element);
@@ -67,6 +64,9 @@ function fetchAndPopulatePokemons(resultsData) {
 
 async function fetchImage() {
   const selectedPokemon = document.querySelector('#selectElementID');
+  const pokemonImage = document.createElement('img');
+  pokemonImage.style.display = 'block';
+  document.body.appendChild(pokemonImage);
   const pokemonImageUrl =
     selectedPokemon.options[selectedPokemon.selectedIndex].value;
   try {
@@ -80,10 +80,9 @@ async function fetchImage() {
 }
 
 async function main() {
+  const url = 'https://pokeapi.co/api/v2/pokemon';
   try {
-    const { results } = await fetchData(
-      'https://pokeapi.co/api/v2/pokemon/?limit=151'
-    );
+    const { results } = await fetchData(url);
     await fetchAndPopulatePokemons(results);
   } catch (error) {
     console.log(error);

@@ -21,7 +21,6 @@ function rollTheDices() {
   return Promise.race(dicsPromisesArray);
 }
 
-// Refactor this function to use async/await and try/catch
 async function main() {
   try {
     const rollTheDicesResponse = await rollTheDices();
@@ -29,12 +28,16 @@ async function main() {
   } catch (error) {
     console.log('Rejected!', error.message);
   }
-  // rollTheDices()
-  //   .then((results) => console.log('Resolved!', results))
-  //   .catch((error) => console.log('Rejected!', error.message));
 }
 
 main();
-
 // ! Do not change or remove the code below
 module.exports = rollTheDices;
+
+//************************************************************************************************************************************* */
+//The explanation about why that some dice continue rolling for some undetermined time after the promise returned by Promise.race():
+//------------------------------------------------------------------------------------------------------------------------------------
+// in our case here we have an asynchronous execution so all the dices are being executing away from each other, and all of the
+// will return one of (resolve/reject), so with the Promise.race we are only returning the first solved/reject promise, but the other
+//promises keep running in the background (event loop) until the get (resolve/reject).
+//************************************************************************************************************************************* */
