@@ -27,8 +27,7 @@ async function fetchData(url) {
   try {
     const response = await fetch(url);
     if (response.ok) {
-      const jsoneResponse = await response.json();
-      return jsoneResponse;
+      return await response.json();
     }
     throw new Error('Request field!');
   } catch (error) {
@@ -41,25 +40,36 @@ function selectElementcreator(optionData) {
   optionElement.value = optionData.url;
   optionElement.textContent = optionData.name;
   document.getElementById('selectElementID').appendChild(optionElement);
-  fetchImage(optionData);
 }
 
-function fetchAndPopulatePokemons(resultsData) {
-  const getPokemonButton = document.createElement('button');
-  getPokemonButton.type = 'text';
-  getPokemonButton.textContent = 'Get Pokemon';
-  document.body.appendChild(getPokemonButton);
-  const selectElement = document.createElement('select');
-  selectElement.setAttribute('id', 'selectElementID');
-  document.body.appendChild(selectElement);
-  getPokemonButton.addEventListener('click', () => {
-    resultsData.forEach((element) => {
-      selectElementcreator(element);
+async function fetchAndPopulatePokemons(url) {
+  let clicked = false;
+
+  try {
+    const { results } = await fetchData(url);
+    const getPokemonButton = document.createElement('button');
+    getPokemonButton.type = 'text';
+    getPokemonButton.textContent = 'Get Pokemon';
+    document.body.appendChild(getPokemonButton);
+    const selectElement = document.createElement('select');
+    selectElement.setAttribute('id', 'selectElementID');
+    document.body.appendChild(selectElement);
+
+    getPokemonButton.addEventListener('click', () => {
+      if (!clicked) {
+        clicked = true;
+        results.forEach((element) => {
+          selectElementcreator(element);
+        });
+      }
     });
-  });
-  selectElement.addEventListener('change', () => {
-    fetchImage();
-  });
+
+    selectElement.addEventListener('change', () => {
+      fetchImage();
+    });
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 async function fetchImage() {
@@ -74,6 +84,7 @@ async function fetchImage() {
     const imgElement = document.querySelector('img');
     imgElement.src = imageResponse.sprites.front_default;
     imgElement.alt = imageResponse.name;
+    imgElement.style.width = '200px';
   } catch (error) {
     console.log(error);
   }
@@ -82,8 +93,7 @@ async function fetchImage() {
 async function main() {
   const url = 'https://pokeapi.co/api/v2/pokemon';
   try {
-    const { results } = await fetchData(url);
-    await fetchAndPopulatePokemons(results);
+    await fetchAndPopulatePokemons(url);
   } catch (error) {
     console.log(error);
   }
