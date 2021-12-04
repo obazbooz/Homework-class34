@@ -982,3 +982,10 @@ Ran all test suites matching /ex2-pokemonApp.test.js/i.
 2021-12-01 05:09:47 error: *** Spell Checker Report ***
 
 
+2021-12-04 03:38:48 info: -----------------------------------------
+2021-12-04 03:38:48 info: >>> Running Unit Test `ex3-rollAnAce` <<<
+2021-12-04 03:38:48 info: -----------------------------------------
+2021-12-04 03:38:55 info: All unit tests passed.
+2021-12-04 03:38:58 error: *** Spell Checker Report ***
+
+

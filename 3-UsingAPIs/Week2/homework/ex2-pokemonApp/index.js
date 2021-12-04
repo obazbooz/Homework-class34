@@ -43,27 +43,14 @@ function selectElementcreator(optionData) {
 }
 
 async function fetchAndPopulatePokemons(url) {
-  let clicked = false;
-
   try {
     const { results } = await fetchData(url);
-    const getPokemonButton = document.createElement('button');
-    getPokemonButton.type = 'text';
-    getPokemonButton.textContent = 'Get Pokemon';
-    document.body.appendChild(getPokemonButton);
-    const selectElement = document.createElement('select');
-    selectElement.setAttribute('id', 'selectElementID');
-    document.body.appendChild(selectElement);
 
-    getPokemonButton.addEventListener('click', () => {
-      if (!clicked) {
-        clicked = true;
-        results.forEach((element) => {
-          selectElementcreator(element);
-        });
-      }
+    const selectElement = document.getElementById('selectElementID');
+    selectElement.textContent = '';
+    results.forEach((element) => {
+      selectElementcreator(element);
     });
-
     selectElement.addEventListener('change', () => {
       fetchImage();
     });
@@ -91,12 +78,23 @@ async function fetchImage() {
 }
 
 async function main() {
+  const getPokemonButton = document.createElement('button');
+  getPokemonButton.type = 'text';
+  getPokemonButton.setAttribute('id', 'getPokemonBtnID');
+  getPokemonButton.textContent = 'Get Pokemon';
+  document.body.appendChild(getPokemonButton);
+  const selectElement = document.createElement('select');
+  selectElement.setAttribute('id', 'selectElementID');
+  document.body.appendChild(selectElement);
   const url = 'https://pokeapi.co/api/v2/pokemon';
-  try {
-    await fetchAndPopulatePokemons(url);
-  } catch (error) {
-    console.log(error);
-  }
+
+  getPokemonButton.addEventListener('click', async () => {
+    try {
+      await fetchAndPopulatePokemons(url);
+    } catch (error) {
+      console.log(error);
+    }
+  });
 }
 
 window.addEventListener('load', main);

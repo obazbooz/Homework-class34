@@ -14,16 +14,10 @@ const rollDice = require('../../helpers/pokerDiceRoller');
 
 async function rollDiceUntil(wantedValue) {
   let rollDiceResponse = await rollDice();
-  if (rollDiceResponse === wantedValue) {
-    return rollDiceResponse;
-  } else {
-    while (rollDiceResponse !== wantedValue) {
-      rollDiceResponse = await rollDice();
-      if (rollDiceResponse === wantedValue) {
-        return rollDiceResponse;
-      }
-    }
+  while (rollDiceResponse !== wantedValue) {
+    rollDiceResponse = await rollDice();
   }
+  return rollDiceResponse;
 }
 
 async function main() {
